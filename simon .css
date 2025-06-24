@@ -1,0 +1,87 @@
+/* === Base Styling === */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    margin-top: 2rem;
+    font-size: 3rem;
+    color: #333;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* === Button Grid === */
+.btn-container {
+    display: grid;
+    grid-template-columns: repeat(2, 160px);
+    grid-gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* === Game Buttons === */
+.btn {
+    width: 160px;
+    height: 160px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    outline: none;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* === Colors === */
+.r {
+    background: radial-gradient(circle, #ff4e50, #f9d423);
+}
+.y {
+    background: radial-gradient(circle, #a770ef, #cf8bf3);
+}
+.b {
+    background: radial-gradient(circle, #43e97b, #38f9d7);
+}
+.g {
+    background: radial-gradient(circle, #667eea, #764ba2);
+}
+
+/* === Flash Effects === */
+.flash {
+    filter: brightness(1.2) saturate(200%);
+    transform: scale(1.08);
+    transition: 0.2s;
+}
+
+.userflash {
+    filter: grayscale(100%) brightness(1.1);
+    transition: 0.2s;
+}
+
+/* === Responsive === */
+@media screen and (max-width: 500px) {
+    .btn-container {
+        grid-template-columns: repeat(2, 120px);
+        grid-gap: 1.5rem;
+    }
+
+    .btn {
+        width: 120px;
+        height: 120px;
+        border-radius: 15px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+}
